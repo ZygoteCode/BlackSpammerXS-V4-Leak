@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{2D94607E-3975-47D7-8937-4DA9416B6EB5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BlackSpammerXS</RootNamespace>
+    <AssemblyName>BlackSpammerXS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>BlackSpammerXS.ico</ApplicationIcon>
+    <StartupObject>BlackSpammerXS.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BlackVerifyNumber" />
+    <Reference Include="BrotliSharpLib" />
+    <Reference Include="Bunifu_UI_v1.52" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="Siticone.UI" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Reactive" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Websocket.Client" />
+    <Reference Include="WindowsInput" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="-Module-.cs" />
+    <Compile Include="AdvancedSettings.cs" />
+    <Compile Include="AlertFM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlertFM.Designer.cs">
+      <DependentUpon>AlertFM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuditJoin.cs" />
+    <Compile Include="AuditLeave.cs" />
+    <Compile Include="AuditLogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuditLogForm.Designer.cs">
+      <DependentUpon>AuditLogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuditManager.cs" />
+    <Compile Include="AuditReact.cs" />
+    <Compile Include="AuditSpam.cs" />
+    <Compile Include="BlackWSManager.cs" />
+    <Compile Include="CapmonsterCaptchaHandler.cs" />
+    <Compile Include="ChannelType.cs" />
+    <Compile Include="ChcapKM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChcapKM.Designer.cs">
+      <DependentUpon>ChcapKM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContentWRX.cs" />
+    <Compile Include="Costura\AssemblyLoader.cs" />
+    <Compile Include="Dashboard.cs" />
+    <Compile Include="DevConsole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevConsole.Designer.cs">
+      <DependentUpon>DevConsole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevToolsBSXS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevToolsBSXS.Designer.cs">
+      <DependentUpon>DevToolsBSXS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GChannel.cs" />
+    <Compile Include="GenerateTextForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerateTextForm.Designer.cs">
+      <DependentUpon>GenerateTextForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GTextRes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GTextRes.Designer.cs">
+      <DependentUpon>GTextRes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuildChannels.cs" />
+    <Compile Include="GuildManager.cs" />
+    <Compile Include="ImpostazioniGlobali.cs" />
+    <Compile Include="LoadingCVF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingCVF.Designer.cs">
+      <DependentUpon>LoadingCVF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logger.Designer.cs">
+      <DependentUpon>Logger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox.cs" />
+    <Compile Include="OpacityFull.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpacityFull.Designer.cs">
+      <DependentUpon>OpacityFull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessedByFody.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ReactionSpammer.cs" />
+    <Compile Include="SECBOOL.cs" />
+    <Compile Include="SecLG.cs" />
+    <Compile Include="SecurityMT.cs" />
+    <Compile Include="ServerSpammer.cs" />
+    <Compile Include="TwoCaptchaHandler.cs" />
+    <Compile Include="WebsocketManager.cs" />
+    <Compile Include="ZaschModeBSOD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZaschModeBSOD.Designer.cs">
+      <DependentUpon>ZaschModeBSOD.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdvancedSettings.resources" />
+    <EmbeddedResource Include="AlertFM.resources" />
+    <EmbeddedResource Include="AuditJoin.resources" />
+    <EmbeddedResource Include="AuditLeave.resources" />
+    <EmbeddedResource Include="AuditLogForm.resources" />
+    <EmbeddedResource Include="AuditReact.resources" />
+    <EmbeddedResource Include="AuditSpam.resources" />
+    <EmbeddedResource Include="ChcapKM.resources" />
+    <EmbeddedResource Include="Costura\blackverifynumber\dll.compressed" />
+    <EmbeddedResource Include="Costura\blackverifynumber\pdb.compressed" />
+    <EmbeddedResource Include="Costura\brotlisharplib\dll.compressed" />
+    <EmbeddedResource Include="Costura\bunifu_ui_v1\52\dll.compressed" />
+    <EmbeddedResource Include="Costura\costura\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\extensions\dependencyinjection\abstractions\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\extensions\dependencyinjection\dll.compressed" />
+    <EmbeddedResource Include="Costura\newtonsoft\json\dll.compressed" />
+    <EmbeddedResource Include="Costura\siticone\ui\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\collections\immutable\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\diagnostics\diagnosticsource\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\interactive\async\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\reactive\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\runtime\compilerservices\unsafe\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\threading\channels\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\threading\tasks\extensions\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\valuetuple\dll.compressed" />
+    <EmbeddedResource Include="Costura\websocket\client\dll.compressed" />
+    <EmbeddedResource Include="Costura\windowsinput\dll.compressed" />
+    <EmbeddedResource Include="Dashboard.resources" />
+    <EmbeddedResource Include="DevConsole.resources" />
+    <EmbeddedResource Include="DevToolsBSXS.resources" />
+    <EmbeddedResource Include="Form1.resources" />
+    <EmbeddedResource Include="GenerateTextForm.resources" />
+    <EmbeddedResource Include="GTextRes.resources" />
+    <EmbeddedResource Include="GuildManager.resources" />
+    <EmbeddedResource Include="LoadingCVF.resources" />
+    <EmbeddedResource Include="Logger.resources" />
+    <EmbeddedResource Include="Login.resources" />
+    <EmbeddedResource Include="OpacityFull.resources" />
+    <EmbeddedResource Include="Properties\Resources.resources" />
+    <EmbeddedResource Include="ReactionSpammer.resources" />
+    <EmbeddedResource Include="ServerSpammer.resources" />
+    <EmbeddedResource Include="WebsocketManager.resources" />
+    <EmbeddedResource Include="ZaschModeBSOD.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
